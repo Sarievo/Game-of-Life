@@ -1,5 +1,3 @@
-package src;
-
 import javax.swing.*;
 import java.awt.*;
 import java.util.concurrent.TimeUnit;
@@ -12,6 +10,7 @@ public class GameOfLife extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(size * sqSize + 25, size * sqSize + 85);
         setVisible(true);
+        setResizable(false);
 
         initComponents();
     }
@@ -130,7 +129,7 @@ public class GameOfLife extends JFrame {
             for (int i = 0; i < size; i++) {
                 for (int j = 0; j < size; j++) {
                     if (matrix[i][j]) {
-                        g.setColor(Color.MAGENTA);
+                        g.setColor(Color.MAGENTA.darker());
                     } else {
                         g.setColor(Color.white);
                     }
